@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    margin-left: 25%;
+    margin-right: 25%; 
+    margin-bottom: 10px; 
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center; /* Center align text inside the container */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: double;
+    margin-top: 30px; 
+}
+
+.form-group {
+    max-width: 400px; /* Set max-width as needed */
+    margin:0 auto;
+    justify-content:end;
+
+}
+
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: center; /* Center align the label text */
+ 
+}
+
+input, textarea {
+    width: 80%; /* Adjust width as needed */
+    margin: 0 auto; /* Center the input within the form group */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:focus, textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    width: 20%; /* Adjust width as needed */
+    margin: 20px auto; /* Center the button */
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.6);
+}

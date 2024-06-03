@@ -1,0 +1,194 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Basic body styling */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+/* Intro section */
+.px-4 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+.pt-5 {
+    padding-top: 3rem !important;
+}
+
+.my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dee2e6 !important;
+}
+
+.display-4 {
+    font-size: 2.5rem;
+}
+
+.fw-bold {
+    font-weight: 700 !important;
+}
+
+.text-body-emphasis {
+    color: #333 !important;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.border {
+    border: 1px solid #dee2e6 !important;
+}
+
+.rounded-3 {
+    border-radius: 0.3rem !important;
+}
+
+/* Custom centering for the image container */
+.d-flex {
+    display: flex !important;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+/* Content layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.w-60 {
+    width: 55%;
+    padding-right: 20px;
+}
+
+.w-40 {
+    width: 45%;
+}
+
+/* Section styling */
+#features, #posts {
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#features h2, #posts h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Styling for featured posts */
+.featured-post {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.featured-post img {
+    width: 100%;
+    height: auto;
+    max-height: 225px; /* Reduce the height of the image */
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Styling for individual post items */
+.post-item {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 8px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-content h3 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+}
+
+.post-content p {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    color: #7f8c8d;
+}
+
+.post-content a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s;
+}
+
+.post-content a:hover {
+    color: #2980b9;
+}
+
+/* Additional styles for responsiveness */
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .w-60, .w-40 {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+        .edit-link {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include('partials/header') %>
+    
+    <section id="intro">
+        <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h1 class="display-4 fw-bold text-body-emphasis">Welcome to Tech News and Updates</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Stay informed with the latest developments in technology, from new product releases to industry trends and technological advancements.</p>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+                <div class="container d-flex justify-content-center px-5">
+                    <img src="/images/tech-welcome.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Tech Welcome Image" width="600" height="500" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="content d-flex justify-content-between">
+        <section id="features" class="w-60">
+            <h2>Featured Posts</h2>
+            <div class="featured-posts">
+                <% featuredPosts.forEach(post => { %>
+                    <div class="featured-post mb-3">
+                        <a href="/posts/<%= post.id %>">
+                            <img src="<%= post.image %>" alt="<%= post.title %>" class="img-fluid mb-2" style="width: 100%; height: auto;">
+                        </a>
+                        <h3>
+                            <a href="/posts/<%= post.id %>"><%= post.title %></a>
+                        </h3>
+                        <p><%= post.summary %></p>
+                        <p>By <%= post.author %> on <%= post.date %></p>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+        
+        <section id="posts" class="w-40">
+            <h2>Latest Posts</h2>
+            <ul class="post-list list-unstyled">
+                <% posts.forEach(post => { %>
+                    <li class="post-item mb-3 d-flex">
+                        <a href="/posts/<%= post.id %>">
+                            <img src="<%= post.image %>" alt="<%= post.title %>" class="me-3" style="width: 100px; height: 100px; object-fit: cover;">
+                        </a>
+                        <div class="post-content">
+                            <h3>
+                                <a href="/posts/<%= post.id %>"><%= post.title %></a>
+                            </h3>
+                            <p><%= post.summary %></p>
+                            <p>By <%= post.author %> on <%= post.date %></p>
+                            <p>
+                                <a href="/posts/<%= post.id %>/edit" class="edit-link">Edit</a>
+                                <a href="/posts/<%= post.id %>/delete" class="edit-link">Delete</a>
+                            </p>
+                        </div>
+                    </li>
+                <% }) %>
+            </ul>
+        </section>
+    </div>
+    
+    <%- include('partials/footer') %>
+</body>
+
+</html>
