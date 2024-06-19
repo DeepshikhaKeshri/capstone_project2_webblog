@@ -8,14 +8,14 @@ const __dirname = dirname(__filename);
 
 const app = express();
 const port = 3001;
+
+// Set view engine
 app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'public')));
+
+// Serve static files from the public directory
+app.use(express.static(join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
-
-
-
-
 
 let posts = [
     {
